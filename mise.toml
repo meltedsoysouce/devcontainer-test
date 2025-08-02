@@ -1,0 +1,10 @@
+[tasks.container-up]
+description="devcontainer-cliを使って、コンテナ環境を作成する"
+run = "devcontainer up --workspace-folder . --id-label id_label={{env.ID_LABEL}}"
+
+[tasks.container-exec]
+description="コンテナ内でコマンドを実行"
+run="devcontainer exec --workspace-folder"
+
+[env]
+ID_LABEL = "test"
