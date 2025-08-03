@@ -4,7 +4,7 @@ run = "devcontainer up --workspace-folder . --id-label id_label={{env.ID_LABEL}}
 
 [tasks.container-exec]
 description="コンテナ内でコマンドを実行"
-run="devcontainer exec --workspace-folder"
+run="devcontainer exec --workspace-folder . --id-label id_label={{env.ID_LABEL}}"
 
 [tasks.checkout-worktree]
 description="git worktreeを切り出す"
