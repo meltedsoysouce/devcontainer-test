@@ -6,5 +6,14 @@ run = "devcontainer up --workspace-folder . --id-label id_label={{env.ID_LABEL}}
 description="コンテナ内でコマンドを実行"
 run="devcontainer exec --workspace-folder"
 
+[tasks.checkout-worktree]
+description="git worktreeを切り出す"
+run="git worktree add -B {{env.BRANCH_NAME}} ./.git/worktree/{{env.BRANCH_NAME}}"
+
+[tasks.remove-worktree]
+description="git worktreeのクリーンアップ"
+run="git worktree remove {{env.BRANCH_NAME}}"
+
 [env]
 ID_LABEL = "test"
+BRANCH_NAME="worktree-test"
