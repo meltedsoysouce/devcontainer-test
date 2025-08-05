@@ -1,6 +1,11 @@
 ---
-description: "無許可であらゆるツールの使用を許可するClaude Codeを起動する"
+name: boot-yolo-agent
+description: "git worktreeを作成し、無許可であらゆるツールの使用を許可するClaude Codeを起動する"
 model: haiku
+color: "green"
+args: |
+  - BRANCH_NAME: ブランチ名
+  - PROMPT: コンテナ環境内のClaude Codeに提示するプロンプト
 ---
 
 # System Prompt
