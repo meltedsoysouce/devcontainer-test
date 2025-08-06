@@ -15,4 +15,4 @@ description="git worktreeのクリーンアップ"
 run="git worktree remove {{env.BRANCH_NAME}}"
 
 [env]
-BRANCH_NAME="worktree-test"
+BRANCH_NAME= "feature/todo-app"
